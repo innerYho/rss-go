@@ -1,26 +1,28 @@
+## Go RSS aggregator project
 [Taked to](https://www.youtube.com/watch?v=un6ZyFkqFKo)
-
+7:07
 ## RSS aggregator project
 # create new module
-go mod init github.com/inneryho/rss-aggregator-go
+go mod 
 
 go build
 
 # run
 go build && ./rss-aggregator-go
 
-git init
-
-
-## Chi
-Install
+# Chi
+Install terminal
 go get github.com/joho/godotenv
-go get -u github.com/go-chi/chi/v5
+go mod vendor  //create a new module folder. required install tidy
+go mod tidy
+go get github.com/go-chi/chi
+go get github.com/go-chi/cors
+
 
 import (
 	"net/http"
 
-	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/v5/middleware"
 )
 
@@ -35,6 +37,4 @@ export PORT=8000
 
 
 # optionals
-https://github.com/go-chi/cors
-git remote add origin https://github.com/innerYho/proyectname.git
-git remote add origin git@github.com:innerYho/rss-go.git
+go get -u github.com/go-chi/chi/v5
